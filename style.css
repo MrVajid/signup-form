@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Geist;
+    src: url(fonts/Geist-1.3.0/variable-ttf/GeistVF.ttf) format(ttf);
+    src: url(fonts/Geist-1.3.0/variable-woff/GeistVF.woff) format(woff);
+    src: url(fonts/Geist-1.3.0/variable-woff/GeistVF.woff2) format(woff2);
+    font-weight: 100 900;
+}
+body {
+    font-family: 'Geist', Times;
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 0;
+    background: rgb(27, 14, 1);
+    color: aliceblue;
+}
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  .silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.image {
+    position: relative;
+    flex-shrink: 0;
+}
+.image img{
+    max-height: 100vh;   
+}
+.image p, .image h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.image p {
+    bottom: 12px;
+}
+.image h1 {
+    top: 45px;
+}
+h1 {
+    font-family: 'Silkscreen';
+    font-size: 2.5rem;
+}  
+.bold {
+    font-weight: 500;
+    font-size: large;
+    line-height: 1.5;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    min-width: 325px;
+}
+.form-box > p {
+    padding-left: calc(8vw - 1rem);
+    padding-right: calc(8vw - 3rem);
+}
+button {
+    appearance: none;
+    margin-left: calc(8vw - 1rem);
+    margin-right: calc(8vw - 3rem);
+    height: 2rem;
+    width: 20ch;
+    border-radius: 12px ;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: rgb(247, 228,153);
+}
+.form-container > p {
+    margin-bottom: 2rem;
+
+}
+.form-container {
+    background: rgb(32, 19, 7);
+    background-clip: padding-box;
+    padding-left: calc(8vw - 1rem);
+    padding-right: calc(8vw - 3rem);
+    margin-bottom: 2rem;
+}
+
+form {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    /* flex-shrink: 1; */
+}
+form p {
+    position: relative;
+    min-width: 200px;
+    width: 40%;
+    padding-bottom: 1.5rem;
+    padding-top: 22px;
+    padding-right: 30px;
+    margin: 0;
+}
+form label {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgb(211, 176, 143);
+
+}
+input {
+    appearance: none;
+    height: 1.6rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgb(42, 1, 1);
+    background-color: rgb(41, 22, 3);
+    width: 100%;
+    padding-left: 8px;
+    color: aliceblue;
+}
+@media only screen and (max-width: 600px){
+    body {
+        flex-wrap: wrap;
+        
+    }
+    .form-box {
+        min-width: 150vw;
+        flex-grow: 1;
+    }
+    .form-box:not(:first-child) {
+        /* width: 80%; */
+        
+        align-items: center;
+    
+    }
+    form {
+        justify-content: center;
+    }
+    form p {
+        width: 80%;
+    }
+    
+    .form-container p {
+        text-align: center;
+    }
+}
